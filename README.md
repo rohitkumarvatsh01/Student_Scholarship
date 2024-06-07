@@ -47,4 +47,22 @@ Upload a CSV file containing student records to determine their scholarship elig
 
 ```bash
 curl -X POST "http://localhost:8080/students/upload"
--H "Content-Type: multipart/form-data" -F "file=@students.csv" -F "science=85" -F "maths=90" -F "english=88" -F "computer=92"
+-H "Content-Type: multipart/form-data"
+-F "file=@students.csv"
+-F "science=85" -F "maths=90" -F "english=88" -F "computer=92"
+
+**Example Request:**
+
+### Get Eligibility Status by Roll Number
+
+Retrieve the scholarship eligibility status of a student by their roll number.
+
+- **URL**: `/students/eligible/{rollNumber}`
+- **Method**: `GET`
+- **Response**: JSON object of the student.
+
+**Example Request:**
+
+```bash
+curl -X GET "http://localhost:8080/students/eligible/1"
+
