@@ -17,3 +17,4 @@ public class StudentServiceApplication {
 }
 
 //http://localhost:8080/swagger-ui/index.html#/
+//https://chatgpt.com/share/0b8e9c36-59e5-4204-a120-eb269e59e885

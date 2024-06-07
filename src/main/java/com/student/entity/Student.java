@@ -7,19 +7,23 @@ import jakarta.persistence.Id;
 public class Student {
 
     @Id
-    private String rollNumber;
+    private Long rollNumber;
     private String studentName;
-    private int science;
-    private int maths;
-    private int english;
-    private int computer;
+    private float science;
+    private float maths;
+    private float english;
+    private float computer;
     private String eligible;
 
-    public String getRollNumber() {
+    public Student() {
+
+    }
+
+    public Long getRollNumber() {
         return rollNumber;
     }
 
-    public void setRollNumber(String rollNumber) {
+    public void setRollNumber(Long rollNumber) {
         this.rollNumber = rollNumber;
     }
 
@@ -31,35 +35,35 @@ public class Student {
         this.studentName = studentName;
     }
 
-    public int getScience() {
+    public float getScience() {
         return science;
     }
 
-    public void setScience(int science) {
+    public void setScience(float science) {
         this.science = science;
     }
 
-    public int getMaths() {
+    public float getMaths() {
         return maths;
     }
 
-    public void setMaths(int maths) {
+    public void setMaths(float maths) {
         this.maths = maths;
     }
 
-    public int getEnglish() {
+    public float getEnglish() {
         return english;
     }
 
-    public void setEnglish(int english) {
+    public void setEnglish(float english) {
         this.english = english;
     }
 
-    public int getComputer() {
+    public float getComputer() {
         return computer;
     }
 
-    public void setComputer(int computer) {
+    public void setComputer(float computer) {
         this.computer = computer;
     }
 
@@ -69,5 +73,28 @@ public class Student {
 
     public void setEligible(String eligible) {
         this.eligible = eligible;
+    }
+
+    public Student(Long rollNumber, String studentName, float science, float maths, float english, float computer, String eligible) {
+        this.rollNumber = rollNumber;
+        this.studentName = studentName;
+        this.science = science;
+        this.maths = maths;
+        this.english = english;
+        this.computer = computer;
+        this.eligible = eligible;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNumber=" + rollNumber +
+                ", studentName='" + studentName + '\'' +
+                ", science=" + science +
+                ", maths=" + maths +
+                ", english=" + english +
+                ", computer=" + computer +
+                ", eligible='" + eligible + '\'' +
+                '}';
     }
 }
