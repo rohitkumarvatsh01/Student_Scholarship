@@ -1,6 +1,3 @@
-**Project Overview**
-The Student Scholarship Eligibility Service is an API for managing student records and determining their eligibility for scholarships based on dynamic criteria.
-
 # Student Scholarship Eligibility Service
 
 ## Overview
