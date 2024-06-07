@@ -2,6 +2,10 @@ package com.student.controller;
 
 import com.student.entity.Student;
 import com.student.service.StudentService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -17,17 +21,29 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/students")
+@Tag(name = "StudentController", description = "Operations for managing student scholarship eligibility")
 public class StudentController {
 
     @Autowired
     private StudentService studentService;
 
-    @PostMapping("/upload")
-    public ResponseEntity<?> uploadCSV(@RequestParam("file") MultipartFile file,
+    @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @Operation(
+            summary = "Upload CSV files with student records",
+            description = "Upload multiple CSV files containing student details and process them to determine scholarship eligibility based on dynamic criteria"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Files uploaded successfully"),
+            @ApiResponse(responseCode = "400", description = "Invalid file format"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+
+    public ResponseEntity<?> uploadCSV(@RequestPart("file") MultipartFile file,
                                        @RequestParam float science,
                                        @RequestParam float maths,
                                        @RequestParam float english,
-                                       @RequestParam float computer) {
+                                       @RequestParam float computer)
+    {
         if (file.isEmpty()) {
             return ResponseEntity.badRequest().body("{\"message\":\"File is empty\"}");
         }
@@ -40,7 +56,10 @@ public class StudentController {
         }
     }
 
-
+    @Operation(
+            summary = "Get eligibility status by roll number",
+            description = "Retrieve the scholarship eligibility status of a student by their roll number"
+    )
     @GetMapping("/eligible/{rollNumber}")
     public ResponseEntity<?> getEligibility(@PathVariable Long rollNumber) {
         Optional<Student> student = studentService.getStudentByRollNumber(rollNumber);
@@ -51,12 +70,20 @@ public class StudentController {
         }
     }
 
+    @Operation(
+            summary = "Get all student records",
+            description = "Retrieve all student records along with their scholarship eligibility status"
+    )
     @GetMapping("/eligible")
     public ResponseEntity<List<Student>> getAll() {
         List<Student> students = studentService.getAll();
         return ResponseEntity.ok(students);
     }
 
+    @Operation(
+            summary = "Download student records as CSV",
+            description = "Download all student records and their scholarship eligibility status as a CSV file"
+    )
     @GetMapping("/download")
     public ResponseEntity<?> downloadCSV() {
         try {
