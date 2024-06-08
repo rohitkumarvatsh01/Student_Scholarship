@@ -1,5 +1,6 @@
 # Student Scholarship Eligibility Service
 
+
 ## Overview
 
 The Student Scholarship Eligibility Service is a Spring Boot application designed to upload, process, and manage student records to determine scholarship eligibility based on specified criteria. It supports CSV file uploads, dynamic eligibility criteria, and provides various endpoints to interact with student data.
@@ -11,11 +12,7 @@ The Student Scholarship Eligibility Service is a Spring Boot application designe
 - *`API Endpoints`*: Access student records and eligibility status via RESTful APIs.
 - *`CSV Download`*: Download all student records and their eligibility status as a CSV file.
 - *`Swagger Integration`*: API documentation and testing through Swagger UI.
-
-- ![Image Alt Text](https://github.com/username/repository/blob/branch/path/to/image.png)
-
-
-
+---
 
 ## API Documentation
 
