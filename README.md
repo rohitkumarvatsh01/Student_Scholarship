@@ -38,6 +38,7 @@ Upload a CSV file containing student records to determine their scholarship elig
 Example Request:
  - **`POST`**: `http://localhost:8080/students/upload`
 
+
 ### 2 Get Eligibility Status by Roll Number
 
 Retrieve the scholarship eligibility status of a student by their roll number.
@@ -48,6 +49,7 @@ Retrieve the scholarship eligibility status of a student by their roll number.
 
 Example Request:
  - **`GET`**: `http://localhost:8080/students/eligible/100101`
+
 
 ### 3 Get All Student Records
 
@@ -60,6 +62,7 @@ Retrieve all student records along with their scholarship eligibility status.
 Example Request:
 - **`GET`**: `http://localhost:8080/students/eligible`
 
+
 ### 4 Download Student Records as CSV
 
 Download all student records and their scholarship eligibility status as a CSV file.
@@ -71,6 +74,8 @@ Download all student records and their scholarship eligibility status as a CSV f
 Example Request:
 - **`GET`**: `http://localhost:8080/students/download`
 - **`File Name`**:- students.csv
+
+---
 
 ## Technologies Used
 
