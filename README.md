@@ -28,7 +28,7 @@ Upload a CSV file containing student records to determine their scholarship elig
 - *Method*: POST
 - *Content-Type*: multipart/form-data
 - *Parameters*:
-  - file (MultipartFile) - The CSV file to upload.
+  - `file` (MultipartFile) - The CSV file to upload.
   - science (float) - Science criteria for eligibility.
   - maths (float) - Maths criteria for eligibility.
   - english (float) - English criteria for eligibility.
