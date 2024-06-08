@@ -24,12 +24,12 @@ The Student Scholarship Eligibility Service is a Spring Boot application designe
 
 ## API Documentation
 
-Access the Swagger UI for detailed API documentation and testing:
+This application integrates Swagger for API documentation and testing. You can access the Swagger UI by visiting the following URL: Swagger UI.
 http://localhost:8080/swagger-ui.html
 
 ## Endpoints
 
-### Upload CSV File
+### 1 Upload CSV File
 
 Upload a CSV file containing student records to determine their scholarship eligibility.
 
@@ -42,3 +42,44 @@ Upload a CSV file containing student records to determine their scholarship elig
   - `maths` (float) - Maths criteria for eligibility.
   - `english` (float) - English criteria for eligibility.
   - `computer` (float) - Computer criteria for eligibility.
+
+Example Request:
+•	POST: http://localhost:8080/students/upload
+
+### 2 Get Eligibility Status by Roll Number
+
+Retrieve the scholarship eligibility status of a student by their roll number.
+
+•	URL: /students/eligible/{rollNumber}
+•	Method: GET
+•	Response: JSON object of the student.
+
+Example Request:
+•	GET: http://localhost:8080/students/eligible/100101
+
+### 3 Get All Student Records
+
+Retrieve all student records along with their scholarship eligibility status.
+
+•	URL: /students/eligible
+•	Method: GET
+•	Response: JSON array of students.
+
+Example Request:
+•	GET http://localhost:8080/students/eligible
+
+### 4 Download Student Records as CSV
+
+Download all student records and their scholarship eligibility status as a CSV file.
+
+•	URL: /students/download
+•	Method: GET
+•	Response: CSV file.
+
+Example Request:
+•	GET http://localhost:8080/students/download
+•	 File Name:- students.csv
+
+
+
+
