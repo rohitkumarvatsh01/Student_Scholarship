@@ -13,8 +13,6 @@ The Student Scholarship Eligibility Service is a Spring Boot application designe
 - *`CSV Download`*: Download all student records and their eligibility status as a CSV file.
 - *`Swagger Integration`*: API documentation and testing through Swagger UI.
 
-![Source Code](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/1fef258e-e2ec-44bb-82c6-7476af062503)
-
 ---
 
 ## API Documentation
