@@ -12,12 +12,18 @@ The Student Scholarship Eligibility Service is a Spring Boot application designe
 - *`API Endpoints`*: Access student records and eligibility status via RESTful APIs.
 - *`CSV Download`*: Download all student records and their eligibility status as a CSV file.
 - *`Swagger Integration`*: API documentation and testing through Swagger UI.
+
+![Source Code](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/1fef258e-e2ec-44bb-82c6-7476af062503)
+
 ---
 
 ## API Documentation
 
 This application integrates Swagger for API documentation and testing. You can access the Swagger UI by visiting the following URL: Swagger UI.
 `http://localhost:8080/swagger-ui.html`
+
+![Swagger](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/323e76f5-fdf0-451b-923a-a9c2c698e761)
+
 
 ## Endpoints
 
@@ -38,7 +44,10 @@ Upload a CSV file containing student records to determine their scholarship elig
 Example Request:
  - **`POST`**: `http://localhost:8080/students/upload`
 
+   ![Post CSV File](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/f3cd8745-da18-4257-a053-5c5e23473e66)
+   ![File Upload Reponse](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/74978360-5072-4da2-b8f6-a85b700d874c)
 
+   
 ### 2 Get Eligibility Status by Roll Number
 
 Retrieve the scholarship eligibility status of a student by their roll number.
@@ -49,6 +58,9 @@ Retrieve the scholarship eligibility status of a student by their roll number.
 
 Example Request:
  - **`GET`**: `http://localhost:8080/students/eligible/100101`
+
+![Get By ID](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/1d2fbbf4-b04e-46de-8797-835ba00c4dd5)
+![Get By ID Response](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/1b71dd94-34f9-4672-a1da-32129be62f32)
 
 
 ### 3 Get All Student Records
@@ -61,6 +73,9 @@ Retrieve all student records along with their scholarship eligibility status.
 
 Example Request:
 - **`GET`**: `http://localhost:8080/students/eligible`
+  
+![Get All Record](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/010a456b-e895-4730-ba4d-a74c932cb7ea)
+![Get All Record Response](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/e4a3cbc7-419f-4d31-9641-40693ed263e0)
 
 
 ### 4 Download Student Records as CSV
@@ -74,6 +89,9 @@ Download all student records and their scholarship eligibility status as a CSV f
 Example Request:
 - **`GET`**: `http://localhost:8080/students/download`
 - **`File Name`**:- students.csv
+
+![Download File](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/9814812e-eddc-41e3-951d-cf00fc5e6b08)
+![Download Response](https://github.com/rohitkumarvatsh01/Student_Scholarship/assets/85385695/daff4b2c-78d4-4b16-8413-0307aa7cab3a)
 
 ---
 
