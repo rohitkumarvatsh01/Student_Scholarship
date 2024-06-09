@@ -25,7 +25,7 @@ public class StudentService {
     private StudentRepository studentRepository;
 
     private static final Logger logger = LoggerFactory.getLogger(StudentService.class);
-    private static final int THREAD_COUNT = 4;
+    private static final int THREAD_COUNT = 8;
 
     public void uploadCSV(MultipartFile file, float scienceCriteria, float mathsCriteria, float englishCriteria, float computerCriteria) throws IOException, InterruptedException, ExecutionException {
         logger.info("Received file for processing: {}", file.getOriginalFilename());
